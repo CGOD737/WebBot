@@ -26,7 +26,7 @@ class WebBot:
         self.driver.find_element_by_id("mms-login-form__login-button").click()
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     WebBot = WebBot()
 
     account = "username"
