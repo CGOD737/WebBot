@@ -1,0 +1,5 @@
+###### Requirements ######
+flask
+itertools
+selenium
+webdriver_manager.chrome
