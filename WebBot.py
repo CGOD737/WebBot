@@ -1,8 +1,10 @@
 #WebBot Framework that can be configured for different automated Web Task
 
+from itertools import product
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.action_chains import ActionChains
 import time
 
 #Assuming chrome driver is in this location, change for whatever path you may have
@@ -20,16 +22,36 @@ class WebBot:
         button = self.driver.find_element_by_id("privacy-layer-accept-all-button")
         button.click()
 
+    #This Method is to be customized based on site information. Eventually will be a little more organized and user friendly
     def login(self, username, password):
-        self.driver.get("https://www.bestbuy.com/identity/signin?token=tid%3A47187327-44d5-11ec-8152-12a67a811cc3")
-        email_input = self.driver.find_element_by_id("fld-e")
+        self.driver.get("https://www.walmart.com/account/login?vid=oaoh&ref=domain")
+       
+        email_input = self.driver.find_element_by_xpath('/html/body/div/div/div[2]/form[1]/div[1]/div/div[1]/input')
         email_input.clear()
         email_input.send_keys(username)
-        pass_input = self.driver.find_element_by_id("fld-p1")
+        
+        pass_input = self.driver.find_element_by_xpath('/html/body/div/div/div[2]/form[1]/div[1]/div/div[2]/input')
         pass_input.clear()
         pass_input.send_keys(password)
-        time.sleep(10)
 
+        sign_in = self.driver.find_element_by_xpath('/html/body/div/div/div[2]/form[1]/div[1]/div/button')
+        sign_in.click()
+
+        time.sleep(3)
+
+        #click and hold security protocol
+        element = self.driver.find_element_by_css_selector('#px-captcha')
+        action = ActionChains(self.driver)
+        click = ActionChains(self.driver)
+        action.click_and_hold(element)
+        action.perform()
+        time.sleep(10)
+        action.release(element)
+        action.perform()
+        time.sleep(0.2)
+        action.release(element)
+
+        time.sleep(20)
 
 if __name__ == '__main__':
 

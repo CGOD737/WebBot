@@ -4,6 +4,7 @@ import flask
 from flask import request
 from flask.templating import render_template
 
+
 import WebBot
 app = flask.Flask(__name__)
 
