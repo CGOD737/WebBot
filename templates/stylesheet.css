@@ -1,8 +1,22 @@
 /* CSS FILE IN SUPPORT OF WEBBOT HTML DOCUMENTS */
 /* WRITTEN BY CHRISTOPHER GODFREY */
 
-h1 {text-align: center;}
-form {text-align: center;}
+/* Header Formatting*/
+h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+/* Form Formatting*/
+form {
+    text-align: center;
+
+}
+.center {
+    padding: 70px 0;
+    text-align: center;
+}
 
 /* css for form*/
 .textbox { 
@@ -69,4 +83,22 @@ form {text-align: center;}
   .button {
     height: 48px;
   }
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #546d75, #8fdb48);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }

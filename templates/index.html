@@ -4,22 +4,29 @@
     <link href="styleSheet.css" rel="stylesheet">
 </head>
 
+<div class=center>
+<body>
+    
+    <script src="script.js"></script>
 
-<h1>Please Enter Your Information for the Bot</h1>
+    <h1>Please Enter Your Information for the Bot</h1>
 
-<form action="submitted" method="post">
-    <!-- First Name Information-->
-    <input class="textbox" type="text" id ="fname" name = "fname" placeholder="First Name"> <br><br>
-    <!-- Last Name Information-->
-    <input class="textbox" type="text" id ="lname" name = "lname" placeholder="Last Name"> <br><br>
-    <!-- Email Information-->
-    <input class="textbox" type="text" id ="email" name = "email" placeholder="Email"> <br><br>
-    <!-- Password-->
-    <input class="password" type="text" id ="password" name = "password" placeholder="Password">
+    <form action="submitted" method="post">
+        <!-- First Name Information-->
+        <input class="textbox" type="text" id ="fname" name = "fname" placeholder="First Name"> <br><br>
+        <!-- Last Name Information-->
+        <input class="textbox" type="text" id ="lname" name = "lname" placeholder="Last Name"> <br><br>
+        <!-- Email Information-->
+        <input class="textbox" type="text" id ="email" name = "email" placeholder="Email"> <br><br>
+        <!-- Password-->
+        <input class="password" type="password" id ="password" name = "password" placeholder="Password"><br>
+        <input type = "checkbox" onclick="togglePW()">Show Password
 
-    <br><br>
+        <br><br>
 
-    <!-- Submit Button-->
-    <button type="submit" class="button">Run Bot</button>
-</form>
+        <!-- Submit Button-->
+        <button type="submit" class="button">Run Bot</button>
+    </form>
+</body>
+</div>
 </html>
