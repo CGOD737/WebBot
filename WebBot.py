@@ -23,7 +23,7 @@ class WebBot:
         button.click()
 
     #This Method is to be customized based on site information. Eventually will be a little more organized and user friendly
-    def login(self, username, password):
+    def login(self, username, password, firstname, lastname):
         self.driver.get("https://www.walmart.com/account/login?vid=oaoh&ref=domain")
        
         email_input = self.driver.find_element_by_xpath('/html/body/div/div/div[2]/form[1]/div[1]/div/div[1]/input')

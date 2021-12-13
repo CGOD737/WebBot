@@ -28,10 +28,9 @@ def runBot(fname, lname, email, password):
     #instantiates the object
     bot = WebBot.WebBot()
 
-    bot.login(email, password)
+    bot.login(email, password, fname, lname)
 
     print("Bot is now Running....")
-
 
     return
 
